@@ -72,9 +72,6 @@ function Login() {
   return (
     <LoginPage>
       <div>
-        <img src="" alt="Logo do app" />
-      </div>
-      <div>
         <LoginForm>
           <label htmlFor="email">
             Login
