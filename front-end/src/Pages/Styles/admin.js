@@ -9,7 +9,7 @@ export const AdminPage = styled.div`
 
 export const AdminNameForm = styled.section`
   display: flex;
-  align-itens: center;
+  align-items: center;
   h2 {
     font-family: "Roboto";
     font-style: normal;
