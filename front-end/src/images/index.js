@@ -7,7 +7,7 @@ const da_mantiqueira_red_ale = require('./da_mantiqueira_red_ale.jpg');
 const skol_269ml = require('./skol_269ml.jpg');
 const skol_beats_senses_269ml = require('./skol_beats_senses_269ml.jpg');
 const skol_beats_senses_313ml = require('./skol_beats_senses_313ml.jpg');
-const skol_lata_350ml = require('./becks_330ml.jpg');
+const skol_lata_350ml = require('./skol_lata_350ml.jpg');
 const stella_artois_275ml = require('./stella_artois_275ml.jpg');
 const heineken_600ml = require('./heineken_600ml.jpg');
 
