@@ -46,10 +46,11 @@ function OrderId() {
   console.log(order);
 
   if (!order) {
-    return <Loading>
-
-      <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
-    </Loading>
+    return (
+      <Loading>
+        <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
+      </Loading>
+    )
   }
 
   return (

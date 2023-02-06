@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { CheckoutTable } from '../Pages/Styles/clientCheckout';
+import { Loading } from '../Pages/Styles/loading';
 import { OrderSection } from '../Pages/Styles/orderId';
 import { getProductSale, put } from '../Services/Request';
 import OrderDetailTable from './OrderDetailTable';
-import { OrderItemDiv } from './Styles/saleOrderDetail';
+import '../style.css'
 
 export default function SellerOrderDetailCard() {
   const [orderInfo, setOrderInfo] = useState({});
@@ -65,8 +66,12 @@ export default function SellerOrderDetailCard() {
     }
   };
 
-  if (!orderInfo) {
-    return <p>Carregando...</p>;
+  if (!order) {
+    return (
+      <Loading>
+        <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
+      </Loading>
+    )
   }
   
   return (
