@@ -5,6 +5,7 @@ import OrderDetailTable from '../Components/OrderDetailTable';
 import { get, put } from '../Services/Request';
 import { CheckoutTable } from './Styles/clientCheckout';
 import { OrderSection } from './Styles/orderId';
+import '../style.css';
 
 function OrderId() {
   const { id } = useParams();
@@ -44,7 +45,7 @@ function OrderId() {
   console.log(order);
 
   if (!order) {
-    return <p>Carregando...</p>;
+    return (<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>);
   }
 
   return (
