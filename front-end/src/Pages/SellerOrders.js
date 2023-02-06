@@ -4,7 +4,7 @@ import OrderCard from '../Components/OrderCard';
 export default function SellerOrders() {
   return (
     <>
-      <SellerHeader />
+      <SellerHeader titulo='Produtos' />
       <OrderCard />
     </>
   );

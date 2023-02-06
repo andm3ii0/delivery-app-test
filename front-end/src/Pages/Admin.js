@@ -1,15 +1,15 @@
 import React from 'react';
-import Header from '../Components/Header';
 import FormCreateUser from '../Components/FormCreateUser';
 import NameFormCreateUser from '../Components/NameFormCreateUser';
 import UserTable from '../Components/UserTable';
 import { AdminProvider } from '../Context/AdminContex';
 import { AdminPage, AdminTableContainer } from './Styles/admin';
+import SellerHeader from '../Components/SellerHeader';
 
 export default function Admin() {
   return (
     <AdminProvider>
-      <Header />
+      <SellerHeader titulo='Gerenciar Usuários' />
       <AdminPage>
         <div>
           <NameFormCreateUser />

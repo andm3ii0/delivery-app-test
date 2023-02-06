@@ -4,7 +4,7 @@ import SellerOrderDetailCard from '../Components/SellerOrderDetailCard';
 export default function SellerOrders() {
   return (
     <>
-      <SellerHeader />
+      <SellerHeader titulo='Produtos' />
       <SellerOrderDetailCard />
     </>
   );

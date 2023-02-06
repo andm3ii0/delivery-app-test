@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { getUserInfo, saveUserInfo } from '../Services/Storage';
 import { HeaderNav, NavLink } from './Styles/header';
 
-export default function SellerHeader() {
+export default function SellerHeader({ titulo }) {
   const { name } = getUserInfo();
 
   return (
@@ -13,7 +13,7 @@ export default function SellerHeader() {
           to="/seller/orders"
         >
           <NavLink color="#2FC18C">
-            Pedidos
+            { titulo }
           </NavLink>
         </Link>
         </div>
