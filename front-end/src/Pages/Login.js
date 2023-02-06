@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { requestLogin, setToken } from '../Services/Request';
 import { LoginForm, FilledButton, UnfilledButton, LoginPage } from './Styles/login';
 import { saveUserInfo, getUserInfo } from '../Services/Storage';
+import beer from '../images/beer.png'
 
 function Login() {
   const [data, setData] = useState({ email: '', password: '' });
@@ -72,6 +73,9 @@ function Login() {
   return (
     <LoginPage>
       <div>
+        <div>
+          <img src={ beer } alt='logo' />
+        </div>
         <LoginForm>
           <label htmlFor="email">
             Login
@@ -97,7 +101,8 @@ function Login() {
             disabled={ disable }
             onClick={ HandleClick }
           >
-            <FilledButton>
+            <FilledButton
+              disabled={ disable }>
               LOGIN
             </FilledButton>
           </button>

@@ -12,6 +12,7 @@ import OrderId from './Pages/OrderId';
 import SellerOrderDetails from './Pages/SellerOrderDetails';
 import { getCart } from './Services/Storage';
 import { AppContext } from './Context/provider';
+import { AppStyled } from './appStyled';
 
 function App() {
   const { setCart } = useContext(AppContext);
@@ -31,18 +32,20 @@ function App() {
   }, []);
 
   return (
-    <Switch>
-      <Route path="/customer/checkout" component={ ClientCheckout } />
-      <Route path="/register" exact component={ Register } />
-      <Route exact path="/" component={ Redirect } />
-      <Route exact path="/login" component={ Login } />
-      <Route exact path="/customer/products" component={ Products } />
-      <Route exact path="/seller/orders" component={ SellerOrders } />
-      <Route exact path="/seller/orders/:id" component={ SellerOrderDetails } />
-      <Route exact path="/admin/manage" component={ Admin } />
-      <Route exact path="/customer/orders" component={ Orders } />
-      <Route exact path="/customer/orders/:id" component={ OrderId } />
-    </Switch>
+    <AppStyled>
+      <Switch>
+        <Route path="/customer/checkout" component={ ClientCheckout } />
+        <Route path="/register" exact component={ Register } />
+        <Route exact path="/" component={ Redirect } />
+        <Route exact path="/login" component={ Login } />
+        <Route exact path="/customer/products" component={ Products } />
+        <Route exact path="/seller/orders" component={ SellerOrders } />
+        <Route exact path="/seller/orders/:id" component={ SellerOrderDetails } />
+        <Route exact path="/admin/manage" component={ Admin } />
+        <Route exact path="/customer/orders" component={ Orders } />
+        <Route exact path="/customer/orders/:id" component={ OrderId } />
+      </Switch>
+    </AppStyled>
   );
 }
 

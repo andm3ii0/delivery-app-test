@@ -1,10 +1,29 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const LoginPage = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & > span {
+      margin: 20px 0;
+      font-family: "Roboto";
+      font-weight: 400;
+      font-size: 36px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #001813;
+    }
+  }
+  img {
+    width: 350px;
+  }
 `;
 
 export const LoginForm = styled.form`
@@ -59,7 +78,12 @@ export const FilledButton = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #036b52;
+  background: ${(props) => {
+    if (props.disabled) {
+      return 'grey';
+    }
+    return '#036b52';
+  }};
   border-radius: 10px;
   font-family: "Roboto";
   font-style: normal;
