@@ -66,7 +66,7 @@ export default function SellerOrderDetailCard() {
     }
   };
 
-  if (!order) {
+  if (!orderInfo) {
     return (
       <Loading>
         <div className="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>;
